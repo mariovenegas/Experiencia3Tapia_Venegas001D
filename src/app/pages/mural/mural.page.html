@@ -1,0 +1,68 @@
+<ion-header class="ion-no-border" translucent>
+  <ion-toolbar>
+    <ion-buttons slot ="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Mural</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-item>
+    <ion-label position="fixed">Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.nombre" required></ion-input>
+  </ion-item>
+
+  <ion-item>
+    <ion-label position="fixed">Email</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.email" required></ion-input>
+  </ion-item>
+  
+  <ion-item>
+    <ion-label position="fixed">Labor</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.labor" required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label position="fixed">Descripcion</ion-label>
+    <ion-input type="text" [(ngModel)]="newDato.descripcion" required></ion-input>
+  </ion-item>
+  
+
+  <ion-button (click)="addTrabajador()" expand="full" color="tertiary" shape="round">
+    Agregar Trabajador
+  </ion-button>
+
+
+
+
+  <ion-grid fixed>
+    <ion-row>
+        <ion-card color="white" *ngFor="let dato of datos">
+
+          <ion-card-header>
+            <ion-avatar>
+              <ion-img src="/assets/gente1.jpg">
+              </ion-img>
+            </ion-avatar>
+            <ion-card-subtitle>{{dato.nombre}}</ion-card-subtitle>
+            <ion-card-title>{{dato.labor}}</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>
+              {{dato.email}}
+              
+            </p>
+
+            <p>
+              {{dato.descripcion}}
+            </p>
+          </ion-card-content>
+
+        </ion-card>
+
+    </ion-row>
+  </ion-grid>
+
+
+</ion-content>
+

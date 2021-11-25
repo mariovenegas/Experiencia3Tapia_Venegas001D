@@ -1,0 +1,56 @@
+<ion-header  class="ion-no-border" translucent >
+  <ion-toolbar>
+    <ion-buttons slot ="start">
+      <ion-menu-button menu="first" color="primary"></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Indicadores</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content color="white">
+
+  <ion-grid fixed>
+    <ion-row>
+        <ion-card color="white">
+
+          <ion-card-header>
+            <ion-card-subtitle>en pesos</ion-card-subtitle>
+            <ion-card-title>Valor UF</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>
+              {{indicador.uf}}
+            </p>
+          </ion-card-content>
+
+        </ion-card>
+        <ion-card color="white">
+
+          <ion-card-header>
+            <ion-card-subtitle>en pesos</ion-card-subtitle>
+            <ion-card-title>Valor UTM</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>
+              {{indicador.utm}}
+            </p>
+          </ion-card-content>
+
+        </ion-card>
+        <ion-card color="white">
+
+          <ion-card-header>
+            <ion-card-subtitle>en porcentaje</ion-card-subtitle>
+            <ion-card-title>Valor IPC</ion-card-title>
+          </ion-card-header>
+          <ion-card-content>
+            <p>
+              {{indicador.ipc}}
+            </p>
+          </ion-card-content>
+
+        </ion-card>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

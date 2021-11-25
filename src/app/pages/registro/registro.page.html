@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>registro</ion-title>
+  </ion-toolbar>
+</ion-header>
+  <ion-content class="ion-padding" fullscreen>
+    <form (ngSubmit)="registro(fRegistro)" #fRegistro ="ngForm" >
+      <ion-row>
+        <ion-col>
+          <ion-list>
+            <ion-item>
+              <ion-label>Email:</ion-label>
+              <ion-input type="email" 
+                        placeholder="ingrese email" 
+                        name="email" 
+                        [(ngModel)]="newDato.email"
+                        pattern="^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$" 
+                        required></ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Password:</ion-label>
+              <ion-input type="clave"
+                          name="clave"
+                          [(ngModel)]="newDato.clave"
+                          required
+                          placeholder="Contraseña">
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Nombre:</ion-label>
+              <ion-input  type="text"
+                          name="nombre"
+                          [(ngModel)]="newDato.nombre"
+                          required
+                          placeholder="Nombre">
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Labor:</ion-label>
+              <ion-input  type="text"
+                          name="labor"
+                          [(ngModel)]="newDato.labor"
+                          required
+                          placeholder="Labor">
+              </ion-input>
+            </ion-item>
+            <ion-item>
+              <ion-label>Descripcion:</ion-label>
+              <ion-input  type="text"
+                          name="descripcion"
+                          [(ngModel)]="newDato.descripcion"
+                          required
+                          placeholder="Descripcion">
+              </ion-input>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+      </ion-row>
+      <ion-row>
+        <ion-col>
+          <ion-button type="submit" [disabled]="fRegistro.invalid" color="tertiary" shape="round" fill="outline">
+            Registrar 
+          </ion-button>
+        </ion-col>
+        <ion-col>
+          <ion-button  color="tertiary" shape="round" fill="outline" (click)= "cancelar()" >
+            Cancelar
+          </ion-button>
+        </ion-col>
+      </ion-row>
+      
+    </form>
+  </ion-content>
