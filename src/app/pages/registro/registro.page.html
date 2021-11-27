@@ -1,6 +1,6 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
-    <ion-title>registro</ion-title>
+    <ion-title>Registro</ion-title>
   </ion-toolbar>
 </ion-header>
   <ion-content class="ion-padding" fullscreen>
@@ -9,7 +9,7 @@
         <ion-col>
           <ion-list>
             <ion-item>
-              <ion-label>Email:</ion-label>
+              <ion-label position="floating">Email:</ion-label>
               <ion-input type="email" 
                         placeholder="ingrese email" 
                         name="email" 
@@ -18,7 +18,7 @@
                         required></ion-input>
             </ion-item>
             <ion-item>
-              <ion-label>Password:</ion-label>
+              <ion-label position="floating">Password:</ion-label>
               <ion-input type="clave"
                           name="clave"
                           [(ngModel)]="newDato.clave"
@@ -27,7 +27,7 @@
               </ion-input>
             </ion-item>
             <ion-item>
-              <ion-label>Nombre:</ion-label>
+              <ion-label position="floating">Nombre:</ion-label>
               <ion-input  type="text"
                           name="nombre"
                           [(ngModel)]="newDato.nombre"
@@ -36,7 +36,7 @@
               </ion-input>
             </ion-item>
             <ion-item>
-              <ion-label>Labor:</ion-label>
+              <ion-label position="floating">Labor:</ion-label>
               <ion-input  type="text"
                           name="labor"
                           [(ngModel)]="newDato.labor"
@@ -45,7 +45,7 @@
               </ion-input>
             </ion-item>
             <ion-item>
-              <ion-label>Descripcion:</ion-label>
+              <ion-label position="floating">Descripcion:</ion-label>
               <ion-input  type="text"
                           name="descripcion"
                           [(ngModel)]="newDato.descripcion"
